@@ -1,27 +1,3 @@
-# chatTTS English voices, please refer to the directory under 'en'.
-
-All TTS are generated using the following parameters.
-
-"prompt": "[oral_5]"
-
-"temperature": 0.3
-
-"top_p": 0.7
-
-"top_k": 20,
-
-Domain: www.TTSlist.com/en/
-Backup: http://ttslist.aiqbh.com/en/"
-
-
-Audio text: 
-
-Long time no see. Do you still remember our university days? What you heard about is the open-source project T T S List. Those were the days of our prime! Do you remember when we climbed that mountain to watch the sunrise? I still remember the wish we made back then.
-
-
-------------------------------------------------------
-
-
 # chatTTS 音色库 TTSlist.com
 chatTTS 音色库 /AI声音编号库/音色抽卡不烦恼
 
