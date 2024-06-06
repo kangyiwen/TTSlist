@@ -42,6 +42,10 @@ Github真是个好地方，学到很多。
 
 这也是我第一个开源项目，有点简陋，希望对你有用。
 
+www.LangChain.com.cn 是我的网站。
+
+我手头 sora.com.cn 和 grok.com.cn，还空着，欢迎一起折腾。
+
 欢迎交流 v: kyw2004
 
 [www.TTSlist.com](http://www.TTSlist.com)
