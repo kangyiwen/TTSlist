@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatTTS音色库 | 人工智能声音编号库,音色抽卡不烦恼 TTS List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 20px;
+            background: linear-gradient(45deg, #ff6b6b, #f06595, #007BFF);
+            color: white;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .intro {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .intro-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            position: relative;
+            text-align: left;
+        }
+        .intro-section h2 {
+            font-size: 1.2em;
+            margin: 0;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            z-index: 1;
+        }
+        .intro-section p {
+            margin-top: 30px;
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+        .intro-section:nth-of-type(1) {
+            background-color: #e0f7fa;
+            color: #00796b;
+        }
+        .intro-section:nth-of-type(2) {
+            background-color: #fff9c4;
+            color: #f57f17;
+        }
+        .intro-section:nth-of-type(3) {
+            background-color: #f3e5f5;
+            color: #6a1b9a;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .button-container {
+            margin: 10px;
+            text-align: center;
+            width: 18%;
+        }
+        button {
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 16px;
+            width: 100%;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        audio {
+            width: 100%;
+            margin-top: 5px;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f06595;
+            color: white;
+            text-align: center;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TTSlist.com</h1>
+		<h1>chatTTS 音色库 /AI声音编号库/音色抽卡不烦恼</h1>
+    </header>
+    <div class="intro">
+        <div class="intro-section">
+            <h2>简介</h2>
+            <p>chatTTS非常好玩，但音色抽卡我花了好多时间，干脆，就全生成了，分享给大家。我互联网创业十几年了，但在2024年5月有AI的帮助下才开始python，Github真是个好地方，这也是我第一个开源项目。
+			
+			<br><br>下面1000个音色从100开始，步长100，一直生产到 100000。目前还没精力区分男生女生。 选择你喜欢的音色编号，填入你的 chatTTS 参数生产即可。</p>
+			
+			<p>英文版音色库生产中...</p>
+			
+        </div>
+        <div class="intro-section">
+            <h2>原文/参数</h2>
+            <p>【音频原文】<br>好久不见。你还记得咱们大学那会儿吗？你听到的是开源项目 T T S List。那可是风华正茂的岁月啊！还记得咱俩爬那个山顶看日出吗？当时许的愿望，我到现在还记得呢。<br><br>【参数】<br>"prompt": "[oral_5]"<br> "temperature": 0.3<br>"top_p": 0.7<br>"top_k": 20,</p>
+        </div>
+        <div class="intro-section">
+            <h2>关于</h2>		
+            <p><a href="https://github.com/2noise/ChatTTS" target="_blank">chatTTS原版</a><br>
+			<a href="https://github.com/jianchang512/chatTTS-ui" target="_blank">ChatTTS WebUI & API</a></p>		
+		
+			<p>欢迎交流<br><img src="kywwx.jpg" style="width: 240px;">
+
+</p>
+        </div>
+    </div>
+    <div class="container">
+        <!-- JavaScript will insert buttons here -->
+    </div>
+    <footer>
+        <p>© 2024 TTS音色库 <a href="http://www.TTSlist.com" target="_blank">www.TTSlist.com</a></p>
+    </footer>
+    <script>
+        const container = document.querySelector('.container');
+        const colors = ['#ff6b6b', '#f06595', '#007BFF', '#51cf66', '#fd7e14'];
+
+        // Function to get a random color from the colors array
+        function getRandomColor() {
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        for (let i = 1; i <= 1000; i++) {
+            const fileNumber = i * 100;
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'button-container';
+
+            const button = document.createElement('button');
+            button.textContent = `音色编号 ${fileNumber}`;
+            button.style.backgroundColor = getRandomColor();
+            button.onclick = () => {
+                const audio = buttonContainer.querySelector('audio');
+                audio.play();
+            };
+
+            const audio = document.createElement('audio');
+            audio.controls = true;
+            audio.src = `${fileNumber}_oral5.wav`;
+
+            buttonContainer.appendChild(button);
+            buttonContainer.appendChild(audio);
+            container.appendChild(buttonContainer);
+        }
+    </script>
+</body>
+</html>
