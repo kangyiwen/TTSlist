@@ -121,36 +121,34 @@
 <body>
     <header>
         <h1>TTSlist.com</h1>
-		<h1>chatTTS 音色库 /AI声音编号库/音色抽卡不烦恼</h1>
+        <h1>chatTTS 音色库 /AI声音编号库/音色抽卡不烦恼</h1>
     </header>
     <div class="intro">
         <div class="intro-section">
             <h2>简介</h2>
             <p>chatTTS非常好玩，但音色抽卡我花了好多时间，干脆，就全生成了，分享给大家。
-			<br><br>下面1000个音色从100开始，步长100，一直生产到 100000。目前还没精力区分男生女生。 选择你喜欢的音色编号，填入你的 chatTTS 参数生产即可。如果音色还不够玩，请一定告诉我。</p>
-			
-			<p>网盘下载：<a href="https://pan.baidu.com/s/1a1t2hdK52LsbRxPQ7-CewQ?pwd=kang" target="_blank">https://pan.baidu.com/s/1a1t2hdK52LsbRxPQ7-CewQ?pwd=kang</a></p>
-			
-			<p>---关于我---</p>
+            <br><br>下面1000个音色从100开始，步长100，一直生产到 100000。目前还没精力区分男生女生。 选择你喜欢的音色编号，填入你的 chatTTS 参数生产即可。如果音色还不够玩，请一定告诉我。</p>
+            
+            <p>网盘下载：<a href="https://pan.baidu.com/s/1a1t2hdK52LsbRxPQ7-CewQ?pwd=kang" target="_blank">https://pan.baidu.com/s/1a1t2hdK52LsbRxPQ7-CewQ?pwd=kang</a></p>
+            
+            <p>---关于我---</p>
 
-			<p>我是康康，互联网创业十几年了，2024年5月在AI的帮助下才开始python，Github真是个好地方，这也是我第一个完全自己搞定的项目。	
-			<br><br>www.LangChain.com.cn是我的网站。我手头 sora.com.cn 和 grok.com.cn，还空着，欢迎一起折腾。</p>				
-
-			
+            <p>我是康康，互联网创业十几年了，2024年5月在AI的帮助下才开始python，Github真是个好地方，这也是我第一个完全自己搞定的项目。    
+            <br><br>www.LangChain.com.cn是我的网站。我手头 sora.com.cn 和 grok.com.cn，还空着，欢迎一起折腾。</p>                
         </div>
         <div class="intro-section">
             <h2>原文/参数</h2>
             <p>【音频原文】<br>好久不见。你还记得咱们大学那会儿吗？你听到的是开源项目 T T S List。那可是风华正茂的岁月啊！还记得咱俩爬那个山顶看日出吗？当时许的愿望，我到现在还记得呢。<br><br>【参数】<br>"prompt": "[oral_5]"<br> "temperature": 0.3<br>"top_p": 0.7<br>"top_k": 20,</p>
         </div>
         <div class="intro-section">
-            <h2>关于</h2>				
+            <h2>关于</h2>                
             <p><a href="https://github.com/2noise/ChatTTS" target="_blank">chatTTS原版</a><br>
-			<a href="https://github.com/jianchang512/chatTTS-ui" target="_blank">ChatTTS WebUI & API</a><br>
-			<a href="https://github.com/kangyiwen/TTSlist/" target="_blank">中文 TTSlist GitHub</a><br>
-			<a href="https://kangyiwen.github.io/TTSlist-En/" target="_blank">英文 TTSlist-En GitHub</a>
-			</p>
-			
-			<p>欢迎交流 AI & 创业<br><img src="kywwx.jpg" style="width: 240px;"></p>
+            <a href="https://github.com/jianchang512/chatTTS-ui" target="_blank">ChatTTS WebUI & API</a><br>
+            <a href="https://github.com/kangyiwen/TTSlist/" target="_blank">中文 TTSlist GitHub</a><br>
+            <a href="https://kangyiwen.github.io/TTSlist-En/" target="_blank">英文 TTSlist-En GitHub</a>
+            </p>
+            
+            <p>欢迎交流 AI & 创业<br><img src="kywwx.jpg" style="width: 240px;"></p>
         </div>
     </div>
     <div class="container">
@@ -158,8 +156,6 @@
     </div>
     <footer>
         <p>© 2024 TTS音色库 <a href="http://www.TTSlist.com" target="_blank">www.TTSlist.com</a>  <a href="https://github.com/kangyiwen/TTSlist/" target="_blank">项目GitHub</a></p>
-		
-		
     </footer>
     <script>
         const container = document.querySelector('.container');
@@ -170,8 +166,8 @@
             return colors[Math.floor(Math.random() * colors.length)];
         }
 
-        for (let i = 1; i <= 995; i++) {
-            const fileNumber = i * 100;
+        // Function to create buttons with lazy-loaded audio
+        function createButton(fileNumber) {
             const buttonContainer = document.createElement('div');
             buttonContainer.className = 'button-container';
 
@@ -180,17 +176,41 @@
             button.style.backgroundColor = getRandomColor();
             button.onclick = () => {
                 const audio = buttonContainer.querySelector('audio');
+                if (!audio.src) {
+                    audio.src = `${fileNumber}_oral5.wav`;
+                }
                 audio.play();
             };
 
             const audio = document.createElement('audio');
             audio.controls = true;
-            audio.src = `${fileNumber}_oral5.wav`;
 
             buttonContainer.appendChild(button);
             buttonContainer.appendChild(audio);
             container.appendChild(buttonContainer);
         }
+
+        // Initial load of a limited number of buttons
+        const initialLoad = 20; // Initial number of buttons to load
+        const incrementLoad = 20; // Number of buttons to load each time user scrolls to bottom
+        let currentLoad = 0;
+
+        function loadButtons() {
+            for (let i = currentLoad; i < currentLoad + initialLoad; i++) {
+                const fileNumber = (i + 1) * 100;
+                createButton(fileNumber);
+            }
+            currentLoad += initialLoad;
+        }
+
+        loadButtons(); // Load initial set of buttons
+
+        // Load more buttons when user scrolls to bottom
+        window.addEventListener('scroll', () => {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                loadButtons();
+            }
+        });
     </script>
 </body>
 </html>
