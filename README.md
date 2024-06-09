@@ -60,3 +60,7 @@ www.LangChain.com.cn 是我的网站。
 
 [ChatTTS WebUI & API](https://github.com/jianchang512/chatTTS-ui)
 
+## 相关推荐
+[Awesome-ChatTTS](https://github.com/libukai/Awesome-ChatTTS)
+
+
