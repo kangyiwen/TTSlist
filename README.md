@@ -3,6 +3,8 @@ chatTTS 音色库 /AI声音编号库/音色抽卡不烦恼
 
 在线挑选音色：http://www.TTSlist.com
 
+备用域名：http://ttslist.aiqbh.com/
+
 网盘下载：https://pan.baidu.com/s/1a1t2hdK52LsbRxPQ7-CewQ?pwd=kang
 
 
