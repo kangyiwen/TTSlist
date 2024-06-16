@@ -4,8 +4,11 @@ chatTTS 音色库 /AI声音编号库/音色抽卡不烦恼
 在线挑选音色：http://www.TTSlist.com
 
 备用域名：http://ttslist.aiqbh.com/
+10000个中文音色：http://ttslist.aiqbh.com/10000cn/
 
 网盘下载：https://pan.baidu.com/s/1a1t2hdK52LsbRxPQ7-CewQ?pwd=kang
+
+2024-6-16  新增音色从 1~10000 个中文音色，请网盘下载，GIthub放不下。
 
 
 ## 简介
